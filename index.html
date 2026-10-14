@@ -5,13 +5,15 @@
 <title>PocketCaddi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#11271d">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://www.pocketcaddi.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.pocketcaddi.com/">
 <meta property="og:title" content="PocketCaddi: your caddie, in your pocket">
 <meta property="og:description" content="One club, adjusted for wind, temperature, altitude and slope. For iPhone and Apple Watch.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://www.pocketcaddi.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="PocketCaddi is a golf caddie app for iPhone and Apple Watch. One club, adjusted for wind, temperature, altitude and slope.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,7 +73,7 @@ em { font-style: italic; color: var(--accent-hi); }
 }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-size: 1.3rem; }
-.logo-mark { width: 28px; height: 28px; flex: none; }
+.logo-mark { height: 44px; width: auto; flex: none; }
 .nav-links { display: flex; gap: 28px; font-size: 0.92rem; color: var(--muted); }
 .nav-links a { text-decoration: none; }
 .nav-links a:hover { color: var(--fg); }
@@ -225,6 +227,7 @@ section { scroll-margin-top: 72px; }
 /* Footer */
 footer { border-top: 1px solid var(--line); padding-block: 40px 56px; margin-top: 96px; color: var(--muted); font-size: 0.88rem; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; align-items: center; }
+.foot-brand { display: flex; align-items: center; gap: 10px; margin: 0; }
 .foot-links { display: flex; flex-wrap: wrap; gap: 20px; }
 .foot-links a { text-decoration: none; }
 .foot-links a:hover { color: var(--fg); }
@@ -237,10 +240,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="/" aria-label="PocketCaddi home">
-      <svg class="logo-mark" viewBox="0 0 28 28" aria-hidden="true">
-        <circle cx="14" cy="14" r="13" fill="#1a3d2e" stroke="#b8884a" stroke-width="1.5"/>
-        <path d="M11 21V7l8 3.5-8 3.5" fill="none" stroke="#f4ede0" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
-      </svg>
+      <img class="logo-mark" src="/assets/logo.png" alt="" width="34" height="44">
       PocketCaddi
     </a>
     <nav class="nav-links" aria-label="Sections">
@@ -460,7 +460,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <footer>
   <div class="wrap">
-    <p>© 2026 PocketCaddi · Zürich, Switzerland</p>
+    <p class="foot-brand"><img src="/assets/logo.png" alt="" width="25" height="32"> © 2026 PocketCaddi · Zürich, Switzerland</p>
     <div class="foot-links">
       <a href="https://www.tiktok.com/@pocketcaddi" target="_blank" rel="noopener">TikTok</a>
       <a href="https://www.instagram.com/pocketcaddi" target="_blank" rel="noopener">Instagram</a>
