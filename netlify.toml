@@ -10,9 +10,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Send the bare domain to www so there is one canonical address.
-[[redirects]]
-  from = "https://pocketcaddi.com/*"
-  to = "https://www.pocketcaddi.com/:splat"
-  status = 301
-  force = true
+# www → pocketcaddi.com is handled by Netlify (primary domain setting), not here.
