@@ -65,6 +65,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.015em; }
 h3 { font-size: 1.35rem; }
 p { margin: 0; }
 em { font-style: italic; color: var(--accent-hi); }
+.stress { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; color: var(--fg); }
 .eyebrow { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-hi); }
 .lede { font-size: 1.15rem; color: var(--muted); max-width: 34em; }
 
@@ -279,7 +280,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div class="hero-copy">
         <p class="eyebrow">Golf caddie app for iPhone</p>
         <h1>Your caddie. <em>In your pocket.</em></h1>
-        <p class="lede">You know your 7 iron goes 145. You don't know what it goes uphill, into a cold breeze, out of the rough, with your fade. PocketCaddi does. It gives you the club a tour caddie would, built on your bag, your tendencies and the conditions in front of you.</p>
+        <p class="lede">You know your 7 iron goes 145. You don't know what it goes uphill, into a cold breeze, out of the rough, with your fade. PocketCaddi does. It gives <span class="stress">you</span> the club a tour caddie would, built on <span class="stress">your</span> bag, <span class="stress">your</span> tendencies and the conditions in front of <span class="stress">you</span>.</p>
         <div class="hero-actions">
           <a data-umami-event="Early access (hero)" class="btn" href="#early">Get free early access</a>
           <a data-umami-event="See what's coming (hero)" class="btn btn-ghost" href="#coming">See what's coming</a>
