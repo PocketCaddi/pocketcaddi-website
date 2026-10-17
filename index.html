@@ -15,10 +15,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pocketcaddi.com/">
 <meta property="og:title" content="PocketCaddi: your caddie, in your pocket">
-<meta property="og:description" content="One club, adjusted for wind, temperature, altitude and slope. For iPhone and Apple Watch.">
+<meta property="og:description" content="Tour-caddie advice built on your bag, your tendencies and the conditions. For iPhone.">
 <meta property="og:image" content="https://pocketcaddi.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="PocketCaddi is a golf caddie app for iPhone and Apple Watch. One club, adjusted for wind, temperature, altitude and slope.">
+<meta name="description" content="PocketCaddi is a golf caddie app for iPhone. Tour-caddie advice built on your bag, your tendencies and the conditions: course maps, plays-like distances, dispersion and Competition Mode.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -92,7 +92,8 @@ em { font-style: italic; color: var(--accent-hi); }
 .btn-ghost { background: transparent; color: var(--fg); border-color: var(--line); }
 .btn-ghost:hover { background: var(--surface); }
 .btn-sm { padding: 10px 16px; font-size: 0.88rem; }
-@media (max-width: 760px) { .nav-links { display: none; } }
+.nav-links a, .btn { white-space: nowrap; }
+@media (max-width: 1000px) { .nav-links { display: none; } }
 
 /* Hero */
 .hero { padding-block: 72px 88px; }
@@ -178,6 +179,12 @@ section { scroll-margin-top: 72px; }
 @keyframes sway { 0%, 100% { transform: rotate(-14deg); } 50% { transform: rotate(10deg); } }
 @media (max-width: 820px) { .watch-grid { grid-template-columns: 1fr; gap: 40px; } .watch-stage { order: -1; } }
 
+.who { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.who-item { border-top: 2px solid var(--accent); padding-top: 18px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.who-item p { color: var(--muted); }
+@media (max-width: 760px) { .who { grid-template-columns: 1fr; } }
+.watch-fmb { font-family: var(--font-mono); font-size: 0.95rem; color: var(--paper); font-variant-numeric: tabular-nums; }
+.watch-fmb span { color: var(--accent-hi); margin-right: 6px; }
 /* Roadmap */
 .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .lane { background: var(--surface); border-radius: 14px; padding: 24px; display: grid; gap: 18px; align-content: start; min-width: 0; }
@@ -256,6 +263,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </a>
     <nav class="nav-links" aria-label="Sections">
       <a data-umami-event="Nav: How it works" href="#how">How it works</a>
+      <a data-umami-event="Nav: Features" href="#features">Features</a>
       <a data-umami-event="Nav: Apple Watch" href="#watch">Apple Watch</a>
       <a data-umami-event="Nav: What's coming" href="#coming">What's coming</a>
       <a data-umami-event="Nav: TikTok" href="#social">TikTok</a>
@@ -269,14 +277,14 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="eyebrow">Golf caddie app · iPhone &amp; Apple Watch</p>
+        <p class="eyebrow">Golf caddie app for iPhone</p>
         <h1>Your caddie. <em>In your pocket.</em></h1>
-        <p class="lede">You know your 7 iron goes 145. You don't know what it goes into a 15 km/h breeze, uphill, at nine degrees, 1,500 metres above sea level. PocketCaddi does. You get one club. That's it.</p>
+        <p class="lede">You know your 7 iron goes 145. You don't know what it goes uphill, into a cold breeze, out of the rough, with your fade. PocketCaddi does. It gives you the club a tour caddie would, built on your bag, your tendencies and the conditions in front of you.</p>
         <div class="hero-actions">
           <a data-umami-event="Early access (hero)" class="btn" href="#early">Get free early access</a>
           <a data-umami-event="See what's coming (hero)" class="btn btn-ghost" href="#coming">See what's coming</a>
         </div>
-        <p class="hero-note">The caddie that doesn't ask questions.</p>
+        <p class="hero-note">No launch monitor. No coaching session. No guesswork.</p>
       </div>
 
       <div class="book" aria-labelledby="book-title">
@@ -316,56 +324,67 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <h2>Three steps. The third one is hitting it.</h2>
       </div>
       <ol class="steps">
-        <li><h3>Get to your ball</h3><p>PocketCaddi already knows which course you're on, where the pin is, and what the weather's doing.</p></li>
-        <li><h3>Look at your phone or wrist</h3><p>No menus, no typing in the wind speed. One number for how it plays, one club to hit.</p></li>
-        <li><h3>Hit the club</h3><p>If it goes wrong, at least it wasn't the club selection. Small comfort, but comfort.</p></li>
+        <li><h3>Tell it your bag, once</h3><p>How far each club flies: full, three-quarter, half and punch. It picks the right club from your very first shot.</p></li>
+        <li><h3>Open it on the course</h3><p>Greens, bunkers, water, fairways and tees load automatically, and every distance is to a real target.</p></li>
+        <li><h3>Take the club it gives you</h3><p>Already adjusted for the wind, the temperature, the slope, your lie and your shot shape. If it still goes wrong, at least it wasn't the club.</p></li>
       </ol>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="features">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">What it accounts for</p>
-        <h2>All the things you'd guess at, measured.</h2>
+        <p class="eyebrow">In the app today</p>
+        <h2>Everything a good caddie knows. Already working.</h2>
       </div>
       <dl class="inputs">
-        <div class="input-row"><dt>Wind</dt><dd><strong>Relative to where you're facing</strong>Not "north-westerly". Into, helping, or off the left. Adjusted for strength.</dd></div>
-        <div class="input-row"><dt>Temperature</dt><dd><strong>Cold air, shorter shots</strong>A November morning and a July afternoon are different golf courses.</dd></div>
-        <div class="input-row"><dt>Altitude</dt><dd><strong>Thin air, longer shots</strong>Built in Switzerland, where the course might be 1,500 m up the mountain.</dd></div>
-        <div class="input-row"><dt>Elevation</dt><dd><strong>Uphill and downhill</strong>The height difference between you and the green, from course data.</dd></div>
-        <div class="input-row"><dt>Your bag</dt><dd><strong>Your yardages, not a tour pro's</strong>Recommendations are built on what you actually hit, not what the box says.</dd></div>
-        <div class="input-row"><dt>Course</dt><dd><strong>Pin distance, automatically</strong>Location and course data do the measuring so you don't pace it out.</dd></div>
+        <div class="input-row"><dt>Course maps</dt><dd><strong>Every hole, already mapped</strong>Greens, bunkers, water, fairways and tee boxes, with routing that knows which way each hole runs. Distances go to real targets, not a dropped pin.</dd></div>
+        <div class="input-row"><dt>Your bag</dt><dd><strong>A caddie that knows your clubs</strong>Full, three-quarter, half and punch distances for every club, plus your shot shape, trajectory and skill level.</dd></div>
+        <div class="input-row"><dt>Conditions</dt><dd><strong>Plays-like, not just yardage</strong>Wind, temperature and elevation all feed into the number. Uphill into a cold breeze? You'll see it.</dd></div>
+        <div class="input-row"><dt>Your lie</dt><dd><strong>Knows where you're standing</strong>Fairway, rough or bunker, worked out from your GPS. No more being told to hit driver out of deep rough.</dd></div>
+        <div class="input-row"><dt>Dispersion</dt><dd><strong>See where your shots really go</strong>Record a few range sessions and your left-right and short-long spread appears as an ellipse around every target. Aim away from trouble, not at it.</dd></div>
+        <div class="input-row"><dt>Course Planner</dt><dd><strong>Plan the round before you play it</strong>Map out every hole shot by shot, with your dispersion on each one. Decide on the carry or the safe side before you get there.</dd></div>
+        <div class="input-row"><dt>Competition Mode</dt><dd><strong>Off, Relaxed or Strict</strong>One toggle for medal rounds. In Strict, club picks, live weather and slope read-outs disappear, so you stay within the Rules of Golf.</dd></div>
+        <div class="input-row"><dt>Round history</dt><dd><strong>Every round, every shot</strong>Scorecards and caddie breakdowns for every round. Open any shot and see exactly what the caddie was thinking.</dd></div>
       </dl>
+    </div>
+  </section>
+
+  <section class="section" id="who">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Who it's for</p>
+        <h2>One app, three kinds of golfer.</h2>
+      </div>
+      <div class="who">
+        <div class="who-item"><h3>Weekend players</h3><p>The confidence of a caddie without hiring one. Stand over the ball knowing it's the right club.</p></div>
+        <div class="who-item"><h3>Improving golfers</h3><p>See where your shots actually go, then plan around it instead of hoping.</p></div>
+        <div class="who-item"><h3>Competitive players</h3><p>All the help in practice and none of it on a card day. Competition Mode handles the switch.</p></div>
+      </div>
     </div>
   </section>
 
   <section class="section" id="watch">
     <div class="wrap watch-grid">
       <div class="watch-copy">
-        <p class="eyebrow">Apple Watch</p>
+        <p class="eyebrow">Apple Watch · Coming next</p>
         <h2>Leave your phone in the bag.</h2>
-        <p class="lede">The Watch app shows the club, the plays-like distance and a wind dial that turns as you do, so "into the wind" always means into the wind from where you're standing.</p>
+        <p class="lede">The Watch app puts the essentials on your wrist and quietly learns from your swing while you play.</p>
         <ul>
-          <li>Wind dial uses your heading, not a compass bearing</li>
-          <li>Your iPhone does the heavy lifting and sends results to your wrist</li>
-          <li>Glance, hit, walk</li>
+          <li>Front, middle and back of the green at a glance</li>
+          <li>A haptic tap when you line up at the wrong part of the fairway</li>
+          <li>One-tap score entry</li>
+          <li>A background swing counter that reviews your tempo and tendencies after the round</li>
         </ul>
       </div>
       <div class="watch-stage" aria-hidden="true">
         <div class="watch">
           <div class="watch-face">
-            <span class="watch-plays">PLAYS 157 M</span>
-            <span class="watch-club">6i</span>
-            <svg class="dial" viewBox="0 0 74 74">
-              <circle cx="37" cy="37" r="33" fill="none" stroke="#2d3a32" stroke-width="2"/>
-              <circle cx="37" cy="37" r="33" fill="none" stroke="#b8884a" stroke-width="2" stroke-dasharray="4 8"/>
-              <g class="dial-arrow">
-                <path d="M37 12 L44 30 L37 26 L30 30 Z" fill="#f4ede0"/>
-                <line x1="37" y1="26" x2="37" y2="58" stroke="#f4ede0" stroke-width="2.5" stroke-linecap="round"/>
-              </g>
-              <text x="37" y="70" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#bdb7a6">15 KM/H</text>
-            </svg>
+            <span class="watch-plays">HOLE 7 · PAR 4</span>
+            <span class="watch-fmb"><span>F</span>142</span>
+            <span class="watch-club">151</span>
+            <span class="watch-fmb"><span>B</span>160</span>
+            <span class="watch-plays">TO MIDDLE</span>
           </div>
         </div>
       </div>
@@ -377,30 +396,28 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div class="section-head">
         <p class="eyebrow">What's coming</p>
         <h2>The roadmap, with no fake launch dates.</h2>
-        <p class="lede">Build the simple version, see how people actually use it, then make it cleverer. Here's where things stand.</p>
+        <p class="lede">The caddie works today. Next, it learns your swing and starts coaching.</p>
       </div>
       <div class="roadmap">
         <div class="lane">
-          <div class="lane-head"><h3>Building now</h3><span class="pill now">Now</span></div>
+          <div class="lane-head"><h3>On your wrist</h3><span class="pill next">Watch</span></div>
           <ul>
-            <li><strong>iPhone app</strong><span>Instant club recommendations from weather, course data, elevation and your yardages.</span></li>
-            <li><strong>Apple Watch companion</strong><span>Club, distance and the live wind dial on your wrist.</span></li>
+            <li><strong>Apple Watch app</strong><span>Green distances, hazard alerts, score entry and a swing counter, without touching your phone.</span></li>
+            <li><strong>Swing tracking</strong><span>We're already recording a research dataset with a Watch lab app: motion, tempo, impact. It becomes on-course swing speed, tempo and transition cues.</span></li>
           </ul>
         </div>
         <div class="lane">
-          <div class="lane-head"><h3>Up next</h3><span class="pill next">Next</span></div>
+          <div class="lane-head"><h3>Through the camera</h3><span class="pill next">Camera</span></div>
           <ul>
-            <li><strong>Lie detection</strong><span>Take a photo of your ball. It reads the lie, including how buried it is. Wrong? Correct it in a tap.</span></li>
-            <li><strong>Shot tracking</strong><span>Record where shots actually went, so your yardages keep getting more accurate.</span></li>
-            <li><strong>Always-on display</strong><span>The Watch keeps your club visible without a wrist flick.</span></li>
+            <li><strong>Camera lie detection</strong><span>Snap your ball. It works out whether you're sitting up, nested or buried, and adjusts the advice.</span></li>
+            <li><strong>AR green reader</strong><span>On iPhones with LiDAR, scan the green and see the putt line drawn on it. Practice rounds only, because the Rules of Golf don't allow it in competition.</span></li>
           </ul>
         </div>
         <div class="lane">
-          <div class="lane-head"><h3>Later</h3><span class="pill">Later</span></div>
+          <div class="lane-head"><h3>A smarter caddie</h3><span class="pill next">Caddie</span></div>
           <ul>
-            <li><strong>Standalone Watch mode</strong><span>GPS on the Watch itself, phone optional.</span></li>
-            <li><strong>Ultra Action Button</strong><span>One press for a recommendation on Apple Watch Ultra.</span></li>
-            <li><strong>Voice</strong><span>Ask Siri what to hit. Under consideration.</span></li>
+            <li><strong>Coaching</strong><span>Not just "you missed right" but "your transition's quick and you're flipping it at impact". A coach that remembers every shot you've hit.</span></li>
+            <li><strong>Custom caddies</strong><span>Conservative, neutral or aggressive, or build your own: the ex-tour pro who tells you to be sensible, or the mate who always says go for it.</span></li>
           </ul>
         </div>
       </div>
@@ -436,8 +453,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       </div>
       <div class="faq">
         <details data-faq><summary>When does it launch?</summary><p>When it's good enough that you'd trust it over your own guess. People on the early access list hear first and get in before the public release.</p></details>
-        <details data-faq><summary>What do I need?</summary><p>An iPhone. An Apple Watch is optional but recommended if you'd rather not pull your phone out on every shot.</p></details>
-        <details data-faq><summary>Is there an Android version?</summary><p>iPhone and Apple Watch come first. Join the list and you'll hear about anything else.</p></details>
+        <details data-faq><summary>What do I need?</summary><p>An iPhone. The Apple Watch app is coming next.</p></details>
+        <details data-faq><summary>Do I need a launch monitor?</summary><p>No. Tell it how far your clubs go and it works from the first shot. A few range sessions add your dispersion, so it knows where your shots really end up.</p></details>
+        <details data-faq><summary>Can I use it in competitions?</summary><p>Yes. Competition Mode has three settings: Off, Relaxed and Strict. In Strict, club picks, live weather and slope read-outs are hidden so you stay within the Rules of Golf.</p></details>
+        <details data-faq><summary>Will my course be on it?</summary><p>It works on any course with mapping data, which covers a lot of courses. If yours isn't there yet, let us know on TikTok or Instagram.</p></details>
+        <details data-faq><summary>Is there an Android version?</summary><p>iPhone comes first. Join the list and you'll hear about anything else.</p></details>
         <details data-faq><summary>How much will it cost?</summary><p>Pricing will be announced before launch. Early access is free.</p></details>
         <details data-faq><summary>Who's behind it?</summary><p>A golfer and engineer based in Zürich who got tired of guessing what the wind was doing.</p></details>
       </div>
