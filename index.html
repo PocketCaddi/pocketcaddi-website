@@ -234,6 +234,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .form-legal { font-size: 0.78rem; color: var(--muted); }
 .form-legal a { color: var(--fg); }
 </style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aa098fca-1bf4-4d89-9b8e-51c1fe166e33" data-domains="pocketcaddi.com,www.pocketcaddi.com"></script>
 </head>
 <body>
 
@@ -244,13 +245,13 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       PocketCaddi
     </a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#how">How it works</a>
-      <a href="#watch">Apple Watch</a>
-      <a href="#coming">What's coming</a>
-      <a href="#social">TikTok</a>
-      <a href="#faq">FAQ</a>
+      <a data-umami-event="Nav: How it works" href="#how">How it works</a>
+      <a data-umami-event="Nav: Apple Watch" href="#watch">Apple Watch</a>
+      <a data-umami-event="Nav: What's coming" href="#coming">What's coming</a>
+      <a data-umami-event="Nav: TikTok" href="#social">TikTok</a>
+      <a data-umami-event="Nav: FAQ" href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-sm" href="#early">Get early access</a>
+    <a data-umami-event="Early access (nav)" class="btn btn-sm" href="#early">Get early access</a>
   </div>
 </header>
 
@@ -262,8 +263,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <h1>Your caddie. <em>In your pocket.</em></h1>
         <p class="lede">You know your 7 iron goes 145. You don't know what it goes into a 15 km/h breeze, uphill, at nine degrees, 1,500 metres above sea level. PocketCaddi does. You get one club. That's it.</p>
         <div class="hero-actions">
-          <a class="btn" href="#early">Get free early access</a>
-          <a class="btn btn-ghost" href="#coming">See what's coming</a>
+          <a data-umami-event="Early access (hero)" class="btn" href="#early">Get free early access</a>
+          <a data-umami-event="See what's coming (hero)" class="btn btn-ghost" href="#coming">See what's coming</a>
         </div>
         <p class="hero-note">The caddie that doesn't ask questions.</p>
       </div>
@@ -403,8 +404,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <h2>Golf, said with a straight face.</h2>
         <p class="lede">Short videos about the bits of golf nobody explains: what it costs, what beginners notice, and what a caddie would actually say. Follow along while the app gets built.</p>
         <div class="social-links">
-          <a class="btn" href="https://www.tiktok.com/@pocketcaddi" target="_blank" rel="noopener">TikTok @pocketcaddi</a>
-          <a class="btn btn-ghost" href="https://www.instagram.com/pocketcaddi" target="_blank" rel="noopener">Instagram @pocketcaddi</a>
+          <a data-umami-event="TikTok (social section)" class="btn" href="https://www.tiktok.com/@pocketcaddi" target="_blank" rel="noopener">TikTok @pocketcaddi</a>
+          <a data-umami-event="Instagram (social section)" class="btn btn-ghost" href="https://www.instagram.com/pocketcaddi" target="_blank" rel="noopener">Instagram @pocketcaddi</a>
         </div>
       </div>
       <ul class="topics">
@@ -424,11 +425,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <h2>The short answers.</h2>
       </div>
       <div class="faq">
-        <details><summary>When does it launch?</summary><p>When it's good enough that you'd trust it over your own guess. People on the early access list hear first and get in before the public release.</p></details>
-        <details><summary>What do I need?</summary><p>An iPhone. An Apple Watch is optional but recommended if you'd rather not pull your phone out on every shot.</p></details>
-        <details><summary>Is there an Android version?</summary><p>iPhone and Apple Watch come first. Join the list and you'll hear about anything else.</p></details>
-        <details><summary>How much will it cost?</summary><p>Pricing will be announced before launch. Early access is free.</p></details>
-        <details><summary>Who's behind it?</summary><p>A golfer and engineer based in Zürich who got tired of guessing what the wind was doing.</p></details>
+        <details data-faq><summary>When does it launch?</summary><p>When it's good enough that you'd trust it over your own guess. People on the early access list hear first and get in before the public release.</p></details>
+        <details data-faq><summary>What do I need?</summary><p>An iPhone. An Apple Watch is optional but recommended if you'd rather not pull your phone out on every shot.</p></details>
+        <details data-faq><summary>Is there an Android version?</summary><p>iPhone and Apple Watch come first. Join the list and you'll hear about anything else.</p></details>
+        <details data-faq><summary>How much will it cost?</summary><p>Pricing will be announced before launch. Early access is free.</p></details>
+        <details data-faq><summary>Who's behind it?</summary><p>A golfer and engineer based in Zürich who got tired of guessing what the wind was doing.</p></details>
       </div>
     </div>
   </section>
@@ -462,8 +463,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <div class="wrap">
     <p class="foot-brand"><img src="/assets/logo.png" alt="" width="25" height="32"> © 2026 PocketCaddi · Zürich, Switzerland</p>
     <div class="foot-links">
-      <a href="https://www.tiktok.com/@pocketcaddi" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://www.instagram.com/pocketcaddi" target="_blank" rel="noopener">Instagram</a>
+      <a data-umami-event="TikTok (footer)" href="https://www.tiktok.com/@pocketcaddi" target="_blank" rel="noopener">TikTok</a>
+      <a data-umami-event="Instagram (footer)" href="https://www.instagram.com/pocketcaddi" target="_blank" rel="noopener">Instagram</a>
       <a href="/privacy">Privacy</a>
     </div>
   </div>
@@ -471,6 +472,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <script>
 (function () {
+  function track(name, data) { try { if (window.umami) window.umami.track(name, data); } catch (e) {} }
+  var calcTracked = false;
+  function trackCalc() { if (!calcTracked) { calcTracked = true; track("Calculator used"); } }
   // Sample bag (carry, metres). Illustration only.
   var BAG = [["Lob wedge",70],["Sand wedge",85],["Gap wedge",100],["Pitching wedge",115],["9 iron",125],["8 iron",135],["7 iron",145],["6 iron",155],["5 iron",165],["4 hybrid",178],["3 wood",205],["Driver",230]];
   var PRESETS = {
@@ -513,7 +517,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   ids.forEach(function (k) {
     el[k].addEventListener("input", function () {
       document.querySelectorAll(".preset").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
-      update();
+      update(); trackCalc();
     });
   });
   document.querySelectorAll(".preset").forEach(function (b) {
@@ -521,10 +525,14 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       var p = PRESETS[b.dataset.preset];
       ids.forEach(function (k) { el[k].value = p[k]; });
       document.querySelectorAll(".preset").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-      update();
+      update(); trackCalc(); track("Calculator preset", { preset: b.textContent });
     });
   });
   update();
+
+  document.querySelectorAll("details[data-faq]").forEach(function (d) {
+    d.addEventListener("toggle", function () { if (d.open) track("FAQ opened", { question: d.querySelector("summary").textContent }); });
+  });
 
   // Email signup, handled by Netlify Forms.
   var form = document.getElementById("signup"), status = document.getElementById("form-status");
@@ -534,7 +542,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     if (!email.value || !email.checkValidity()) { status.textContent = "Enter a valid email address."; email.focus(); return; }
     status.textContent = "Adding you…";
     fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(form)).toString() })
-      .then(function (r) { if (!r.ok) throw new Error(); status.textContent = "You're on the list. We'll be in touch before launch."; form.reset(); })
+      .then(function (r) { if (!r.ok) throw new Error(); status.textContent = "You're on the list. We'll be in touch before launch."; form.reset(); track("Early access signup"); })
       .catch(function () { status.textContent = "That didn't go through. Try again in a minute."; });
   });
 })();
